@@ -8,77 +8,28 @@
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <ion-card-content>
-      <ion-item lines="none">
-        <ion-icon name="hourglass-outline" alot="start" color="warning"></ion-icon>
-        
-        <ion-label style="padding:10px">
-          On hold
-          <p>
-            22/02/2022
-          </p>
-        </ion-label>
-
-      </ion-item>
-      <ion-item lines="none">
-        <ion-label>
-          <p>created on 21/02/2022</p>
-          <p>Notes:We have two bags that are full one with plastic and the other with rubber.</p>
-        </ion-label>
-      </ion-item>
-    </ion-card-content>
-  </ion-card>
+  <app-pickup-call-card [hasHeader]="false" [hasFooter]="false" 
+  status="On hold" 
+  updatedAt="22/02/2022" 
+  createdAt="21/02/2022" 
+  notes="We have two bags that are full one with plastic and the other with rubber.">
+</app-pickup-call-card>
+  <!--can exclude the booleans since null values return false.-->
+  <!--Utilises the @Input in the pickup-call-card-component.ts-->
   
-  <ion-card>
-    <ion-card-content>
-      <ion-item lines="none">
-        <ion-icon name="archive" alot="start" color="warning"></ion-icon>
-        
-        <ion-label style="padding:10px">
-          Processing
-          <p>
-            25/02/2022
-          </p>
-        </ion-label>
+  <app-pickup-call-card   
+  status="Processing" 
+  updatedAt="23/02/2022" 
+  createdAt="22/02/2022" 
+  notes="We have two bags that are full one with plastic">
+</app-pickup-call-card>
+  
+<app-pickup-call-card 
+  status="Finished" 
+  updatedAt="24/02/2022" 
+  createdAt="23/02/2022" 
+  notes="Finished product.">
 
-      </ion-item>
-      <ion-item lines="none">
-        <ion-label>
-          <p>created on 21/02/2022</p>
-          <p>Notes:We have two bags that are full one with plastic and the other with rubber.</p>
-        </ion-label>
-      </ion-item>
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <ion-card-content>
-      <ion-item lines="none">
-        <ion-icon name="checkmark" alot="start" color="warning"></ion-icon>
-        
-        <ion-label style="padding:10px">
-          Finished
-          <p>
-            28/02/2022
-          </p>
-        </ion-label>
-
-      </ion-item>
-      <ion-item lines="none">
-        <ion-label>
-          <p>created on 21/02/2022</p>
-          </ion-label>
-          
-      </ion-item>
-      <ion-item lines="none">
-        <ion-icon name="trophy" slot="start" color="success"></ion-icon>
-        <ion-label color="success">
-          <strong>
-            $ 15.00
-          </strong>
-          </ion-label>
-      </ion-item>
-    </ion-card-content>
-  </ion-card>
+</app-pickup-call-card>
 
 </ion-content>
