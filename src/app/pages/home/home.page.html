@@ -19,9 +19,16 @@
     </ion-item>
   </ion-list>
 
-  <app-pickup-call-card [hasHeader]="true" [hasFooter]="true"></app-pickup-call-card>
+  <app-pickup-call-card 
+  [hasHeader]="true" 
+  [hasFooter]="true"
+  status="On hold" 
+  updatedAt="24/02/2022" 
+  createdAt="23/02/2022"
+  notes="We have two bags that are full one with plastic and the other with rubber."
+  ></app-pickup-call-card>
 
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed" >
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="fab()">
     <ion-fab-button color="success">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
