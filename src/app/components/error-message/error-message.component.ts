@@ -9,6 +9,8 @@ import { FormGroup } from '@angular/forms';
 export class ErrorMessageComponent implements OnInit {
   @Input() message: string;
   @Input() field: FormGroup;
+  //errors to check are either valid or required type errors.
+  //form.get('email').errors?.email does the same thing as ///!form.get('email').valid
   @Input() error: string;
 
   constructor() { }
